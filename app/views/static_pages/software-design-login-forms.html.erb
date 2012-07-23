@@ -1,0 +1,39 @@
+<h1>Login Forms</h1>
+
+I want everyone to think about software design more in your everyday lives.  I want you to appreciate the little things that software designers and testers do to make things easier for you, even if it only saves you one second.  And I want you to feel free to email software companies and tell them that their software sucks, if that is how you feel about it.
+<br><br>
+To display this, I want to look at login forms.  The reason for choosing login forms is because everyone has used at least several login forms, and I think that most people consider login forms to be simple and similar, without much differences between each.
+<br><br>
+From my experiences, a lot of people will often complain about improvements that should be made in particular software, but they don't realize that the changes they ask for would actually cause other problems (myself included).  A software design idea is often very different when transferred from a person's mind to writing.  And it is often very different again when transferred from writing to implementation.  Because of this, I stepped into the shoes of a developer, and I fully implemented a login system.
+<br><br><br>
+First, look at the League of Legends login form when I submit it with an account that doesn't exist and a random password:
+<br><br>
+<img alt="LoL login form" src="/assets/lol-login.jpg" />
+<br><br><br>
+Now look at the login form that I created, when I submit it with an account that doesn't exist and a random password:
+<br><br>
+<img alt="scottville login form" src="/assets/scottville-login.jpg" />
+<br><br><br>
+Okay, let's talk about the differences between these two login forms and what I don't like about the League of Legends form.  The League of Legends form might be more visually appealing to you, and that's okay.  I want to talk about functionality.
+<br><br>
+1. Preserving input.  In most cases, I think it is best to preserve a user's bad input on an error.  Have you ever tried to log in to a form, get an error without your input preserved, then not know if you typed your account correctly?  So you type it again to make sure, and get the same error.  What a waste of your time.  With the input preserved, you can see if you mistyped your account by one character or not.  And if you did, then it's almost always faster to fix the preserved bad input than to retype the correct version.  Password fields are one of the exceptions to preserving bad input, so Riot did good there.
+<br><br>
+2. Autofocus a field.  If you are visiting a login form, you are going to be typing into those fields.  So the browser might as well autofocus the first one.  Additionally, my form autofocuses the first one with an error if there are errors (so a good account but bad password would preserve the account and autofocus the password field).  And even if you decide that you don't want to login, and navigate to another page instead, auto focusing a field isn't going to hurt anything.  The only reasonable exception I can think of is that the user can't hit backspace to return to the previous page, but I think the trade-off here is worth it.
+<br><br>
+3. Error message color.  Making the error message red let's the user instantly know that is new text when the page reloads.  Leaving the text as the normal black color like Riot does might take a few seconds for the user to realize that it is new text.  Even if it only takes the user one second to realize, I think that is a big difference between instantly realizing.  Even if the user is barely paying attention while logging in with my form, they are still going to realize that the red text wasn't there before.  Luckily for Riot, there is no other text on their form, otherwise that error message could easily become lost.
+<br><br>
+4. Error message placement.  I don't know how other people feel about this, but I just don't see having the error message way off to the left as being better than directly centered above the form.
+<br><br>
+5. A simple error message icon.  This isn't mandatory, but I think that having a small and simple image to represent an error helps the user to instantly know that there was an error in the form.  Honestly, just from the image and the red text, many users probably wouldn't even have to read the error message to realize what went wrong.
+<br><br>
+6. If the account doesn't exist, then specify that the account doesn't exist.  This is one that really bothers me.  Notice how the League of Legends form tells you that your username OR your password is wrong?  Well which is it?  Does Riot not know?  Is the database being lazy today?  How am I, the user, supposed to correct my mistake if the software doesn't even know what the problem is?  I don't know if this has happened to anyone else, but it has to me in the past on other sites... you haven't been to the site in a long time, and you guess your account/password.  It doesn't work and the error is invalid account/password combination.  You keep trying passwords for a while until you realize that the problem is it's the wrong account name.  So if the user's account can't be found, then the software should really just specify that, and not mention the password at all.  If the account doesn't exist, then no password is going to be correct.
+<br><br>
+7. Have you noticed yet that there is no space between the first and second sentence of Riot's error message?  Am I seriously supposed to believe that this was tested?
+<br><br>
+8. You might notice that Riot tries to offer the user a solution in the error message, with a link.  This is a pretty awesome thing to do, and more forms should probably do it.  However, they sadly link me to the wrong place.  If you remember, I said that I input an account that doesn't exist.  Directing me to the password recovery page will not fix my problem, it will only make things take longer by misleading me.  Instead, the error message should link to the account creation page since my account does not exist, which as you can see, my login form does.  Additionally, you can't see this from the screenshot, but when you click on that "create this account" link in my error message, it not only brings you to the account creation page, but also autofills your failed email address from the login form into the account creation form.  How much would you love me if all software treated you like that?
+<br><br>
+9. League of Legends doesn't have a "keep me logged in" checkbox.  Depending on the web site, there might be a good reason to not include this option.  But in general, as a user, I want to have this option.
+<br><br>
+Conclusion:
+<br>
+Even a game with 32 million players can have many flaws in their software.  You might think that each of my points are very minor and only going to save a few seconds of your time, maybe even only one second.  But multiply that times the number of flaws on the page, times number of pages you visit in a web site, times number of web sites that you visit, times number of people who use software like this daily.  Not only do changes like these save people time, but also frustration.  People like me (someone making a web site during spare time) should be following standards set by big software companies.  Big software companies like Riot should be trying to raise those standards.  But instead, we have what you see in those screenshots.  And Riot rejected me from their web QA analyst position... what a joke!

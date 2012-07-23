@@ -1,4 +1,16 @@
 Blog::Application.routes.draw do
+
+  root to: 'static_pages#home'
+  
+  match '/about', to: 'static_pages#about'
+  
+  # diablo 3
+  match '/diablo3', to: 'static_pages#diablo3'
+  
+  # software design
+  match '/software-design', to: 'static_pages#software-design'
+  match '/software-design/login-forms', to: 'static_pages#software-design-login-forms'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
