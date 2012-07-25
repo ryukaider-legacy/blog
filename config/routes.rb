@@ -4,12 +4,33 @@ Blog::Application.routes.draw do
   
   match '/about', to: 'static_pages#about'
   
+  # diablo 2
+  match '/diablo2', to: 'static_pages#diablo2'
+  match '/diablo2/the-list-of-things-that-dont-fool-around', to: 'static_pages#diablo2-the-list-of-things-that-dont-fool-around'
+  
   # diablo 3
   match '/diablo3', to: 'static_pages#diablo3'
+  match '/diablo3/farming-durations', to: 'static_pages#diablo3-farming-durations'
+  match '/diablo3/gems', to: 'static_pages#diablo3-gems'
+  
+  # runescape
+  match '/runescape', to: 'static_pages#runescape'
+  match '/runescape/dungeoneering', to: 'static_pages#runescape-dungeoneering'
   
   # software design
   match '/software-design', to: 'static_pages#software-design'
   match '/software-design/login-forms', to: 'static_pages#software-design-login-forms'
+  
+  # starcraft 2
+  match '/starcraft2', to: 'static_pages#starcraft2'
+  match '/starcraft2/campaign-research-paths', to: 'static_pages#starcraft2-campaign-research-paths'
+  match '/starcraft2/issues-with-reapers', to: 'static_pages#starcraft2-issues-with-reapers'
+  match '/starcraft2/issues-with-void-rays', to: 'static_pages#starcraft2-issues-with-void-rays'
+  
+  # world of warcraft
+  match '/world-of-warcraft', to: 'static_pages#world-of-warcraft'
+  match '/world-of-warcraft/if-i-made-the-new-paladin-heal', to: 'static_pages#world-of-warcraft-if-i-made-the-new-paladin-heal'
+  match '/world-of-warcraft/13-reasons-why-archeology-is-awful', to: 'static_pages#world-of-warcraft-13-reasons-why-archeology-is-awful'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
