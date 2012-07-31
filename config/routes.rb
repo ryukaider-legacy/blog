@@ -14,6 +14,15 @@ Blog::Application.routes.draw do
   match '/diablo3/gems', to: 'static_pages#diablo3-gems'
   match '/diablo3/elite-affixes', to: 'static_pages#diablo3-elite-affixes'
   match '/diablo3/legendaries', to: 'static_pages#diablo3-legendaries'
+  match '/diablo3/level-cap', to: 'static_pages#diablo3-level-cap'
+  match '/diablo3/pvp', to: 'static_pages#diablo3-pvp'
+  match '/diablo3/pvp-part2', to: 'static_pages#diablo3-pvp-part2'
+  match '/diablo3/elemental-damage', to: 'static_pages#diablo3-elemental-damage'
+  match '/diablo3/life-gain', to: 'static_pages#diablo3-life-gain'
+  match '/diablo3/drops-in-lower-difficulties', to: 'static_pages#diablo3-drops-in-lower-difficulties'
+  match '/diablo3/what-to-farm', to: 'static_pages#diablo3-what-to-farm'
+  match '/diablo3/drops-in-higher-difficulties', to: 'static_pages#diablo3-drops-in-higher-difficulties'
+  match '/diablo3/item-requirements-to-beat-the-game', to:'static_pages#diablo3-item-requirements-to-beat-the-game'
   
   # mass effect 2
   match '/mass-effect2', to: 'static_pages#mass-effect2'
