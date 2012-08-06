@@ -42,6 +42,11 @@ Blog::Application.routes.draw do
   match '/starcraft2/issues-with-reapers', to: 'static_pages#starcraft2-issues-with-reapers'
   match '/starcraft2/issues-with-void-rays', to: 'static_pages#starcraft2-issues-with-void-rays'
   
+  # tribes
+  match '/tribes', to: 'static_pages#tribes'
+  match '/tribes/random-things-i-like', to: 'static_pages#tribes-random-things-i-like'
+  match '/tribes/questionable-features', to: 'static_pages#tribes-questionable-features'
+  
   # world of warcraft
   match '/world-of-warcraft', to: 'static_pages#world-of-warcraft'
   match '/world-of-warcraft/if-i-made-the-new-paladin-heal', to: 'static_pages#world-of-warcraft-if-i-made-the-new-paladin-heal'
