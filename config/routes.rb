@@ -24,6 +24,10 @@ Blog::Application.routes.draw do
   match '/diablo3/drops-in-higher-difficulties', to: 'static_pages#diablo3-drops-in-higher-difficulties'
   match '/diablo3/item-requirements-to-beat-the-game', to:'static_pages#diablo3-item-requirements-to-beat-the-game'
   
+  # eve
+  match '/eve-online', to: 'static_pages#eve-online'
+  match '/eve-online/improving-distribution-missions', to: 'static_pages#eve-online-improving-distribution-missions'
+  
   # mass effect 2
   match '/mass-effect2', to: 'static_pages#mass-effect2'
   match '/mass-effect2/game-analysis', to: 'static_pages#mass-effect2-game-analysis'
