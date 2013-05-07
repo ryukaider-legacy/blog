@@ -28,6 +28,7 @@ Blog::Application.routes.draw do
   match '/eve-online', to: 'static_pages#eve-online'
   match '/eve-online/improving-distribution-missions', to: 'static_pages#eve-online-improving-distribution-missions'
   match '/eve-online/improving-clones', to: 'static_pages#eve-online-improving-clones'
+  match 'eve-online/improving-industry', to: 'static_pages#eve-online-improving-industry'
   
   # mass effect 2
   match '/mass-effect2', to: 'static_pages#mass-effect2'
