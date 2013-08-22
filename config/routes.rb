@@ -30,6 +30,10 @@ Blog::Application.routes.draw do
   match '/eve-online/improving-clones', to: 'static_pages#eve-online-improving-clones'
   match 'eve-online/improving-industry', to: 'static_pages#eve-online-improving-industry'
   
+  # hearthstone
+  match '/hearthstone', to: 'static_pages#hearthstone'
+  match '/hearthstone/first-impressions', to: 'static_pages#hearthstone-first-impressions'
+  
   # mass effect 2
   match '/mass-effect2', to: 'static_pages#mass-effect2'
   match '/mass-effect2/game-analysis', to: 'static_pages#mass-effect2-game-analysis'
