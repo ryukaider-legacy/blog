@@ -33,6 +33,7 @@ Blog::Application.routes.draw do
   # hearthstone
   match '/hearthstone', to: 'static_pages#hearthstone'
   match '/hearthstone/first-impressions', to: 'static_pages#hearthstone-first-impressions'
+  match '/hearthstone/hero-power', to: 'static_pages#hearthstone-hero-power'
   
   # mass effect 2
   match '/mass-effect2', to: 'static_pages#mass-effect2'
